@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+ 
+*{
+  box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+ /*  start of navbar*/
+  header.navbar-container {
+    max-width: 2000px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    background-color: #fff;
+    padding-block: 1rem;
+    z-index: 999;
+  }
+   
+  header.navbar-container .logo img {
+    width: 40px;
+  }
+   
+  header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+  }
+   
+  header.navbar-container .nav-list li {
+    list-style-type: none;
+  }
+   
+  header.navbar-container .nav-list li a {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+  }
+   
+  header.navbar-container .nav-list li:hover a {
+    background-color: #92e3a9;
+    color: white;
+  }
+/*  end of navbar*/
+
+/*  start of dropdown*/
+  .dropbtn {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    padding: 0.1rem 2.5rem;
+    border-radius: 999px;
+    background-color: transparent;
+    transition: all .2s ease-in-out;
+}
+
+  .dropbtn:hover, .dropbtn:focus {
+    background-color: #92e3a9;
+    color: white;
+}
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+  .dropdown-content a:hover {background-color: #ddd;}
+    .show {display:block;
+}
+/* end of dropdown*/
+
+/* start of maincontent*/
+main {
+  margin-top: 60px;
+  padding: 20px 20px 20px 20px;
+  overflow: auto;
+  background-color: #F5F3F2;
+}
+
+main .content{
+  float: left;
+  width: 75%;
+  padding-top: 10px;
+}
+
+.beranda{
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  align-items: center;
+  height: 500px;
+}
+
+main .content .content-description p{
+  line-height: 1.7rem;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+main .content .content-description h1{
+  line-height: 1.7rem;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.content-image {
+  flex: 1;
+  display: flex;
+}
+ .content-image img {
+  margin: auto;
+  min-width: 250px;
+  width: 430px;
+}
+
+.content-image-program img {
+  margin: auto;
+  min-width: 40px;
+  width: 200px;
+}
+
+.card {
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.228);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+
+#info .card {
+  text-align: left;
+}
+
+.main-content {
+  text-align: justify;
+}
+
+.main-content .article-content p{
+  text-align: right;
+  line-height: 1.7rem;
+  font-size: 1.4rem;
+}
+
+.main-content .article-content h1{
+  text-align: right;
+  line-height: 1.7rem;
+  font-size: 2rem;
+}
+
+aside {
+  float: right;
+  width: 25%;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+#konsultasi{
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  align-items: center;
+}
+
+#info .card{
+  background-color: #92e3a9;
+  box-shadow: 0 4px 8px 0 rgba(130, 130, 130, 0.4);
+  flex-basis: 50%;
+}
+
+#info h2{
+  line-height: 1.7rem;
+  font-size: 2rem;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.row{
+  display: flex;
+  gap: 1rem;
+}
+
+aside .card{
+  padding: 5px 8.5px 5px 5px;
+  flex-direction: column;
+}
+
+aside .card img{
+  height: 100px;
+  border-radius: 50%;
+}
+/* end of maincontent*/
+
+/* start of footer*/
+footer {
+  background-color: #92e3a9;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  padding-left: 20px;
+  color: rgb(120, 120, 120);
+}
+
+footer p {
+  font-size: 10px;
+}
+/* end of footer*/
+
+/* start to resposive*/
+@media screen and (max-width:1807px) {
+  main {
+     flex-flow: column nowrap;
+  }
+
+  main aside {
+     align-self: center;
+  }
+}
+
+@media screen and (max-width:959px){
+  main aside{
+     align-self: stretch !important;
+     width: 100%;
+     padding-left: 0;
+     display: flex;
+     flex-direction: column-reverse;
+  }
+
+  main .content .content-description p{
+    text-align: center;
+  }
+
+  main .content .content-description h1{
+    text-align: center;
+  }
+
+  .beranda{
+    flex-direction: column;
+  }
+  
+  #konsultasi{
+    margin-top: 100px;
+    flex-direction: column-reverse;
+  }
+
+  .content-description{
+    text-align: center;
+  }
+
+  .content-image img {
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .row{
+    display: block !important;
+  }
+
+  header.navbar-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header.navbar-container .logo {
+    order: 2;
+    margin-top: 10px;
+  }
+
+  header.navbar-container .nav-list {
+    order: 3;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header.navbar-container .nav-list li {
+    margin: 0;
+  }
+
+  header.navbar-container .nav-list li a {
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    font-size: .9rem;
+  }
+   
+  header.navbar-container .nav-list ul {
+    flex-wrap: wrap;
+    column-gap: .1rem;
+  }
+
+  main {
+    display: block !important;
+  }
+
+  main .content {
+      width: 100%;
+      flex-direction: column;
+  }
+ }
+
+ @media screen and (max-width:451px){
+  .beranda .content-image img {
+    margin: auto;
+    width: 100px !important;
+  }
+ }
+/* end code resposive*/
+
